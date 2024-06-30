@@ -470,7 +470,7 @@ It's like calculating a staker total rewards since block 0, but removing the rew
 ### The ```AccumulatedRewardsPerShare``` implementation
 Using the previous contract as base, we can simply calculate ```accumulatedRewardsPerShare``` on ```updatePoolRewards``` function (renamed from ```updateStakersRewards```) and get the staker ```rewardsDebt``` each time they perform an action.
 
-You can see the diff code on [this code base]().
+You can see the diff code on [this code base](https://github.com/ojiubasi-motif/Masterchef-and-Compound/blob/master/masterchef.sol).
 
 ### Gas Saving
 The reason we are avoiding a loop is mainly to save gas. As you can imagine, the more stakers we have, the more expensive the ```updateStakersRewards``` function gets. 
